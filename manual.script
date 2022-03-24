@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "Which commands's manual do you want to read?"
+read command
+man $command
