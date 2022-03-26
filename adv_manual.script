@@ -1,0 +1,19 @@
+#!/bin/bash
+
+echo "What are you looking for?"
+echo "1. Manual for a command"
+echo "2. Command using keyword"
+echo "Choose option 1 or 2"
+read option
+case $option in  #case chosen based on the option provided
+	1)
+		echo "Which command do you want the manual for?"
+		read command
+		man $command  #Provides the manual for the command requested if the man page is present
+		;;
+	2)
+		echo "Enter the keyword and I'll try to find the associated command"
+		read keyword
+		man -k $keyword  #uses the keyword to search for related commands could be replaced with apropos
+		;;
+esac
